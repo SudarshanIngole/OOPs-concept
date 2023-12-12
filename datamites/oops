@@ -8,3 +8,48 @@ class addition:
 
 run=addition()
 run.display()
+
+
+class Bank:
+    def __init__(self):
+        self.bank_balance=50000
+        self.name="Darshan"
+        self.account="0xxxxxx9999"
+        
+    def info(self):
+        print(self.bank_balance)
+        print(self.name)
+        print(self.account)
+    
+    def deposite(self):
+        amt= int(input("Enter amt"))
+        self.bank_balance+=amt
+        
+        
+    def withdraw(self):
+        amt= int(input("Enter amt"))
+        self.bank_balance-=amt
+        
+    def transfer(self):
+        amt= int(input("Enter amt"))
+        self.bank_balance-=amt
+
+pin=int(input("Enter pin"))
+if (pin==5402):
+    p1=Bank()
+    ch=int(input("Enter your choice \n1.info\n2.deposite\n3.withdraw\n4.transfer\n5.exit"))
+    if(ch==1):
+        p1.info()
+    elif(ch==2):
+        p1.deposite()
+        p1.info()
+    elif(ch==3):
+        p1.withdraw()
+        p1.info()
+    elif(ch==4):
+        p1.transfer()
+        p1.info()
+    else:
+        print("Exit")
+else:
+    print("incorrect pin")
