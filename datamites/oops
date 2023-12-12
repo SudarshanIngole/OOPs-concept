@@ -1,0 +1,10 @@
+# OOPs is the Object Oriented Programming 
+class addition:
+    def __init__(self):
+        self.a=10
+        self.b=80
+    def display(self):
+        print(self.a-self.b)
+
+run=addition()
+run.display()
